@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "My Backup Script"
+echo "*****My Backup Script********"
 echo "This script will create a backup of your files."
 
 SOURCE=$1
@@ -15,6 +15,6 @@ if [ -d "$SOURCE" ]; then
     tar -czf "$BACKUP_FILE" -C "$SOURCE" .
     echo "Backup completed successfully."
 else
-    echo "Source is not a directory: $SOURCE"
+    echo "Source input is not a valid directory: $SOURCE"
     exit 1
 fi
